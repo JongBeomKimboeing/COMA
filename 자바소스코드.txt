@@ -1,0 +1,35 @@
+package org.androidtown.buslastplease;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    public void onButton1Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), busstop_where.class);
+        startActivity(intent);
+    }
+    public void onButton2Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), num_where.class);
+        startActivity(intent);
+    }
+    public void onButton3Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), bus_reser.class);
+        startActivity(intent);
+    }
+    public void onButton4Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), list_reser.class);
+        startActivity(intent);
+    }
+    public void onButton5Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), set.class);
+        startActivity(intent);
+    }
+}
