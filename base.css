@@ -1,0 +1,33 @@
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+#header, .maintitle, .welcome, #menu, li{display: inline-block;, position: relative;}
+body {
+padding: 50px; background-color: #eeecec;
+front-family: "Lucida Grande", Verdana, Arial, sans-serif;
+front-size: 12px;
+}
+#header{display:table; padding-right: 50px; padding-left: 50px; width: 100%;}
+.maintitle{display: table-cell;
+text-align:center;
+font-size: 45px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.welcome{position: absolute; margin:30px; top: 30px; right: 50px;}
+
+nav{
+display:table;
+width: 100%;
+top: 200px;
+padding: 50px;
+padding-right: 100px; padding-left: 100px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li{ display: table-cell; font-size: 20px;
+  vertical-align: middle;
+  text-align: center;}

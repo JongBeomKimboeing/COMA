@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block title %}home.html{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="main_image_buttons" >
+        <table style="margin:0 auto">
+            <tr>
+                <td colspan="2">
+                    <div class="weeklyBtn">
+                        <a href="weekly.html">
+                            <img src="image/image.png" width="500px" height="250px">
+                        </a>
+                    </div>
+                </td>
+                <td rowspan="3">
+                    <div class="imgBtn">
+                        <a href="mission.html">
+                            <img src="image/t.png" width="300px" height="750px">
+                        </a>
+                    </div>
+                </td>
+                <td rowspan="2">
+                    <div class="imgBtn">
+                        <a href="event.html">
+                            <img src="image/sk.jpg" width="250px" height="500px">
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr><td colspan="2">
+                <div class="monthlyBtn">
+                    <a href="monthly.html">
+                        <img src="image/image.png" width="500px" height="250px">
+                    </a>
+                </div>
+            </td></tr>
+            <tr><td>
+                <div class="imgBtn">
+                    <a href="store.html">
+                        <img src="image/image22.jpg" width="250px" height="250px">
+                    </a>
+                </div>
+            </td>
+            <td></td>
+            <td>
+                <div class="imgBtn">
+                    <a href="statistics.html">
+                        <img src="image/image22.jpg" width="250px" height="250px">
+                    </a>
+                </div>
+            </td></tr>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+<div id="footer">
+    this is FOOTER area.
+</div>
+{% endblock footer %}
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %}Django Web Programing{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}?ver=1" />
+    <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
+</head>
+<body>
+<div id="header">
+    <h2 class="maintitle" style="color: #4EAB87">GREEN MONEY</h2>
+    {% if user.is_active %}
+    <h4 class="welcome">Welcome,
+                <strong>{% firstof user.get_short_name user.get_name %}</strong> /
+                <a href="{% url 'password_change' %}">Change Password</a> /
+                <a href="{% url 'logout' %}">Logout</a>
+    </h4>
+    {% else %}
+    <h4 class="welcome">Welcome, Anonymous /
+                <a href="{% url 'login' %}">Login</a> /
+                <a href="{% url 'register' %}">Register</a>
+    </h4>
+    {% endif %}
+
+</div>
+<nav>
+    <li><a href="{% url 'home' %}">Home</a> </li>
+    <li><a href="{% url 'polls:noticeLV' %}">공지사항</a> </li>
+    <li><a href="#">목표&인증</a> </li>
+    <li><a href="#">상품</a> </li>
+    <li><a href="#">고객센터</a> </li>
+</nav>
+
+{% block content %}{% endblock %}
+
+{% block footer %} {% endblock %}
+
+
+</body>
+</html>
