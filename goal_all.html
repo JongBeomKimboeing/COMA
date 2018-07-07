@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Goal List</title>
+</head>
+<body>
+<style>
+    h3{margin:5px;}
+    .content{width:80%; margin:0 auto;}
+    .body{margin-left:5%;}
+    table{width:100%;}
+    td{height:10px; border-bottom: 1px solid #bcbcbc;}
+    .title-cell{ padding-left:20px; background-color:rgb(207,210,157);}
+    .content-cell{background-color: rgb(253, 250, 249);}
+</style>
+{% extends "base.html" %}
+{% block content %}
+<div class="content">
+    <h1>목표</h1>
+    <hr>
+    <b />
+    <table><tr><td class="title-cell">
+        {% for goal in goals %}
+            <h3>{{ goal.title }} </h3>
+            {{ notice.modify_date|date:"N d, Y" }}</td></tr>
+            <tr><td class="content-cell"><div class="body">{{ goal.content|linebreaks }}</div>
+        {% endfor %}
+    </td></tr></table>
+    <br />
+    <div>
+        <span>
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">PreviousPage</a>
+            {% endif %}
+
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">NextPage</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
